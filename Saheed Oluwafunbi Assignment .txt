@@ -1,0 +1,220 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+// ---------- Abstraction & Encapsulation ----------
+class SchoolMember {
+private:
+    string name;   // Encapsulation: private data
+    int age;
+
+public:
+    // Constructor
+    SchoolMember(string n, int a) {
+        name = n;
+        age = a;
+    }
+
+    // Getters (to access private data)
+    string getName() {
+        return name;
+    }
+
+    int getAge() {
+        return age;
+    }
+
+    // Abstract method (virtual function)
+    virtual void introduce() = 0;  
+};
+
+// --------- Inheritance & Polymorphism ----------
+class Student : public SchoolMember {
+private:
+    string grade;
+
+public:
+    Student(string n, int a, string g) : SchoolMember(n, a) {
+        grade = g;
+    }
+
+    // Polymorphism: method overriding
+    void introduce() override {
+        cout << "I am " << getName() << ", a " << grade 
+             << " student, and I am " << getAge() << " years old." << endl;
+    }
+};
+
+class Teacher : public SchoolMember {
+private:
+    string subject;
+
+public:
+    Teacher(string n, int a, string s) : SchoolMember(n, a) {
+        subject = s;
+    }
+
+    // Polymorphism: method overriding
+    void introduce() override {
+        cout << "I am " << getName() << ", a " << subject 
+             << " teacher, aged " << getAge() << "." << endl;
+    }
+};
+
+
+// --------- Main Program (Execution) ----------
+int main() {
+    Student student1("Esther", 22, "Computer Science");
+    Teacher teacher1("Mr. John", 45, "Mathematics");
+
+    student1.introduce();
+    teacher1.introduce();
+
+    return 0;
+}#include <iostream>
+#include <string>
+using namespace std;
+
+// ---------- Abstraction & Encapsulation ----------
+class SchoolMember {
+private:
+    string name;   // Encapsulation: private data
+    int age;
+
+public:
+    // Constructor
+    SchoolMember(string n, int a) {
+        name = n;
+        age = a;
+    }
+
+    // Getters (to access private data)
+    string getName() {
+        return name;
+    }
+
+    int getAge() {
+        return age;
+    }
+
+    // Abstract method (virtual function)
+    virtual void introduce() = 0;  
+};
+
+// --------- Inheritance & Polymorphism ----------
+class Student : public SchoolMember {
+private:
+    string grade;
+
+public:
+    Student(string n, int a, string g) : SchoolMember(n, a) {
+        grade = g;
+    }
+
+    // Polymorphism: method overriding
+    void introduce() override {
+        cout << "I am " << getName() << ", a " << grade 
+             << " student, and I am " << getAge() << " years old." << endl;
+    }
+};
+
+class Teacher : public SchoolMember {
+private:
+    string subject;
+
+public:
+    Teacher(string n, int a, string s) : SchoolMember(n, a) {
+        subject = s;
+    }
+
+    // Polymorphism: method overriding
+    void introduce() override {
+        cout << "I am " << getName() << ", a " << subject 
+             << " teacher, aged " << getAge() << "." << endl;
+    }
+};
+
+
+// --------- Main Program (Execution) ----------
+int main() {
+    Student student1("Esther", 22, "Computer Science");
+    Teacher teacher1("Mr. John", 45, "Mathematics");
+
+    student1.introduce();
+    teacher1.introduce();
+
+    return 0;
+}#include <iostream>
+#include <string>
+using namespace std;
+
+// ---------- Abstraction & Encapsulation ----------
+class SchoolMember {
+private:
+    string name;   // Encapsulation: private data
+    int age;
+
+public:
+    // Constructor
+    SchoolMember(string n, int a) {
+        name = n;
+        age = a;
+    }
+
+    // Getters (to access private data)
+    string getName() {
+        return name;
+    }
+
+    int getAge() {
+        return age;
+    }
+
+    // Abstract method (virtual function)
+    virtual void introduce() = 0;  
+};
+
+// --------- Inheritance & Polymorphism ----------
+class Student : public SchoolMember {
+private:
+    string grade;
+
+public:
+    Student(string n, int a, string g) : SchoolMember(n, a) {
+        grade = g;
+    }
+
+    // Polymorphism: method overriding
+    void introduce() override {
+        cout << "I am " << getName() << ", a " << grade 
+             << " student, and I am " << getAge() << " years old." << endl;
+    }
+};
+
+class Teacher : public SchoolMember {
+private:
+    string subject;
+
+public:
+    Teacher(string n, int a, string s) : SchoolMember(n, a) {
+        subject = s;
+    }
+
+    // Polymorphism: method overriding
+    void introduce() override {
+        cout << "I am " << getName() << ", a " << subject 
+             << " teacher, aged " << getAge() << "." << endl;
+    }
+};
+
+
+// --------- Main Program (Execution) ----------
+int main() {
+    Student student1("Esther", 22, "Computer Science");
+    Teacher teacher1("Mr. John", 45, "Mathematics");
+
+    student1.introduce();
+    teacher1.introduce();
+
+    return 0;
+}
